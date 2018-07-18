@@ -15,8 +15,10 @@
 <body>
 	<div id="app">
 		<h2>{{message}}</h2>
+		<h3>{{count}}</h3>
 		<input type="text"  v-model="message">
-		<button v-on="" class="btn btn-primary"> press me ?!</button>
+		<button v-on:click="countUp" class="btn btn-primary"> up ?!</button>
+		<button @click="countDwon" class="btn btn-primary"> Down ?!</button>
 	</div>
 
 <script src="js/jquery-2.2.3.min.js"></script>
@@ -28,6 +30,15 @@
 		el:'#app',
 		data : {
 			message : 'hello Vue js ',
+			count : 0
+		},
+		methods :{
+			countUp : function  () {
+				this.count +=1;
+			},
+			countDwon : function  () {
+				this.count -=1;
+			}
 		}
 	});
 </script>
