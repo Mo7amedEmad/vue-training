@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue lesson-2 (directives)</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+				<h1>{{message}}</h1>
+				<h1 v-bind:title="message">{{message}}</h1>
+			<hr>
+				<h1 v-bind:title="titledesc">{{message}}</h1>
+			<hr>
+			<img v-bind:src="url" v-bind:alt="imgtitle" v-bind:title="imgtitle" v-bind:width="width"  v-bind:height="height">
+	</div>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data : {
+			message : 'hello Vue js ',
+			titledesc : "hello from title two",
+			imgtitle : "this is title of the image",
+			url : "https://www.freddiesflowers.com/build/images/homepage/first_frame.jpg",
+			width : "200px",
+			height : "200px"
+		}
+	});
+</script>
+</body>
+</html>

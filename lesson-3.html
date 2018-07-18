@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue lesson-2 (directives)</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+			<h1 v-text="message"></h1>
+			<h2 v-html ="intro"></h2>
+			<h3 v-show ="viewed">viewed here</h3>
+			<h3 v-if ="viewedif">viewed from if here</h3>
+			<h3 v-if ="viewed == viewed3">viewed from if 3 here</h3>
+		<hr>
+			<h3 v-if ="viewcodition">viewed from if codtition here</h3>
+			<h3 v-else>viewed from else here</h3>
+		<hr>
+			<h1>{{message}}</h1>
+			<h1 v-pre>{{message}}</h1>
+		<hr>
+			<h1 v-once>{{message}}</h1>
+		<hr>
+			<h1 v-cloak>{{message}}</h1>
+
+	</div>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data : {
+			message : 'hello Vue js ',
+			intro : "<small>hello from intro </small> this is text <b>from HTML</b>",
+			viewed : true,
+			viewedif : false,
+			viewed3 : true,
+			viewcodition : false,
+		}
+	});
+</script>
+</body>
+</html>
